@@ -1,0 +1,9 @@
+.task{
+    width:90vw;
+    margin: 3px auto;
+    border-radius: 16px;
+    border:2px solid black;
+}
+.heading{
+    margin: 0px 40vw;
+}

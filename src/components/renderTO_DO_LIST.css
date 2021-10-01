@@ -1,0 +1,14 @@
+.cont{
+  width: 90vw;
+  border: 2px solid black;
+  border-radius: 16px;
+  margin: 3px auto;
+  font-size: 20px;
+}
+.unline{
+    width: 25px;
+    height: 5px;
+    margin-top: 4px;
+    background-color: red;
+    border-radius: 16px;
+}

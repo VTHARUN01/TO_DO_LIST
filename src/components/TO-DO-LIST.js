@@ -16,6 +16,11 @@ class To_do_list extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.addState(this.state)
+        this.setState({
+            Task: '',
+            Time: '',
+            description: ''
+        })
     }
     render() {
         return (
@@ -24,15 +29,15 @@ class To_do_list extends Component {
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup className="mt-2 mb-2" row>
                         <Col xs={{ size: 5, offset: 1 }}>
-                            <Input placeholder="Don't be lazy Enter A Task" name="Task" type="text" onChange={this.handleInput} />
+                            <Input placeholder="Don't be lazy Enter A Task" name="Task" type="text" onChange={this.handleInput} value={this.state.Task} />
                         </Col>
                         <Col xs={3}>
-                            <Input type="time" placeholder="Time" name="Time" onChange={this.handleInput} />
+                            <Input type="time" placeholder="Time" name="Time" onChange={this.handleInput} value={this.state.Time} />
                         </Col>
                     </FormGroup>
                     <FormGroup className="mb-2" row>
                         <Col xs={{ size: 5, offset: 1 }}>
-                            <Input type="text" placeholder="Describe It" name="description" onChange={this.handleInput} />
+                            <Input type="text" placeholder="Describe It" name="description" onChange={this.handleInput} value={this.state.description} />
                         </Col>
                         <Col xs={2}>
                             <Button color="danger"><span className="fa fa-pencil fa-lg"></span></Button>
